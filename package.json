@@ -1,4 +1,29 @@
 {
-  "name": "backend",
-  "packageManager": "yarn@4.9.2"
+   "name": "backend",
+   "packageManager": "yarn@4.9.2",
+   "scripts": {
+      "build": "tsc",
+      "dev:server": "ts-node-dev ./src/server.ts --transpileOnly",
+      "prettify": "npx prettier . --write",
+      "lint": "npx prettier . --check"
+   },
+   "dependencies": {
+      "date-fns": "^4.1.0",
+      "express": "^5.1.0",
+      "pg": "^8.14.1",
+      "uuidv4": "^6.2.13"
+   },
+   "devDependencies": {
+      "@eslint/js": "^9.32.0",
+      "@types/express": "^5.0.3",
+      "eslint": "^9.32.0",
+      "eslint-config-prettier": "^10.1.8",
+      "globals": "^16.3.0",
+      "jiti": "^2.5.1",
+      "prettier": "3.6.2",
+      "ts-node": "^10.9.2",
+      "ts-node-dev": "^2.0.0",
+      "typescript": "^5.8.3",
+      "typescript-eslint": "^8.38.0"
+   }
 }
