@@ -1,5 +1,7 @@
-import User from "../models/User";
+import User from '../models/User';
 import { AppDataSource } from '../database/data-source';
+import { hash } from 'bcryptjs';
+import AppError from '../errors/AppError';
 
 interface Request {
   name: string;
@@ -8,21 +10,23 @@ interface Request {
 }
 
 class CreateUserService {
-  public async execute({ name, email, password}: Request) : Promise<User> {
-    const usersRepository = AppDataSource.getRepository(User)
+  public async execute({ name, email, password }: Request): Promise<User> {
+    const usersRepository = AppDataSource.getRepository(User);
 
     const checkUserExists = await usersRepository.findOne({
-      where: { email }
-    })
-    if(checkUserExists) {
-      throw new Error("Email address already used.")
+      where: { email },
+    });
+    if (checkUserExists) {
+      throw new AppError('Email address already used.');
     }
+
+    const hashedPassword = await hash(password, 8);
 
     const user = usersRepository.create({
       name,
       email,
-      password
-    })
+      password: hashedPassword,
+    });
 
     await usersRepository.save(user);
 
@@ -30,4 +34,4 @@ class CreateUserService {
   }
 }
 
-export default CreateUserService
+export default CreateUserService;

@@ -9,8 +9,12 @@
     "typeorm": "typeorm-ts-node-commonjs"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
     "date-fns": "^4.1.0",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
     "pg": "^8.16.3",
     "reflect-metadata": "^0.2.2",
     "typeorm": "^0.3.25",
@@ -18,7 +22,10 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
+    "@types/cors": "^2",
     "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9",
+    "@types/multer": "^2",
     "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^16.3.0",
