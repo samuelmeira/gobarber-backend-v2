@@ -49,6 +49,7 @@ const RAW_RUNTIME_STATE =
           ["reflect-metadata", "npm:0.2.2"],\
           ["ts-node", "virtual:f5126a6c59718fab632a5fe9c89dad727d14c0854924da0278c36945a50e100550614ee30506e48e5221c7c36dc5ebab4a104a63756e8b71f6e37453259fec8c#npm:10.9.2"],\
           ["ts-node-dev", "virtual:f5126a6c59718fab632a5fe9c89dad727d14c0854924da0278c36945a50e100550614ee30506e48e5221c7c36dc5ebab4a104a63756e8b71f6e37453259fec8c#npm:2.0.0"],\
+          ["tsconfig-paths", "npm:4.2.0"],\
           ["typeorm", "virtual:f5126a6c59718fab632a5fe9c89dad727d14c0854924da0278c36945a50e100550614ee30506e48e5221c7c36dc5ebab4a104a63756e8b71f6e37453259fec8c#npm:0.3.25"],\
           ["typescript", "patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>::version=5.9.2&hash=5786d5"],\
           ["typescript-eslint", "virtual:f5126a6c59718fab632a5fe9c89dad727d14c0854924da0278c36945a50e100550614ee30506e48e5221c7c36dc5ebab4a104a63756e8b71f6e37453259fec8c#npm:8.38.0"],\
@@ -1042,6 +1043,7 @@ const RAW_RUNTIME_STATE =
           ["reflect-metadata", "npm:0.2.2"],\
           ["ts-node", "virtual:f5126a6c59718fab632a5fe9c89dad727d14c0854924da0278c36945a50e100550614ee30506e48e5221c7c36dc5ebab4a104a63756e8b71f6e37453259fec8c#npm:10.9.2"],\
           ["ts-node-dev", "virtual:f5126a6c59718fab632a5fe9c89dad727d14c0854924da0278c36945a50e100550614ee30506e48e5221c7c36dc5ebab4a104a63756e8b71f6e37453259fec8c#npm:2.0.0"],\
+          ["tsconfig-paths", "npm:4.2.0"],\
           ["typeorm", "virtual:f5126a6c59718fab632a5fe9c89dad727d14c0854924da0278c36945a50e100550614ee30506e48e5221c7c36dc5ebab4a104a63756e8b71f6e37453259fec8c#npm:0.3.25"],\
           ["typescript", "patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>::version=5.9.2&hash=5786d5"],\
           ["typescript-eslint", "virtual:f5126a6c59718fab632a5fe9c89dad727d14c0854924da0278c36945a50e100550614ee30506e48e5221c7c36dc5ebab4a104a63756e8b71f6e37453259fec8c#npm:8.38.0"],\
@@ -2588,6 +2590,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../.yarn/berry/cache/json-stable-stringify-without-jsonify-npm-1.0.1-b65772b28b-10c0.zip/node_modules/json-stable-stringify-without-jsonify/",\
         "packageDependencies": [\
           ["json-stable-stringify-without-jsonify", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["json5", [\
+      ["npm:2.2.3", {\
+        "packageLocation": "../../../../../.yarn/berry/cache/json5-npm-2.2.3-9962c55073-10c0.zip/node_modules/json5/",\
+        "packageDependencies": [\
+          ["json5", "npm:2.2.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4187,6 +4198,18 @@ const RAW_RUNTIME_STATE =
           ["strip-bom", "npm:3.0.0"],\
           ["strip-json-comments", "npm:2.0.1"],\
           ["tsconfig", "npm:7.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["tsconfig-paths", [\
+      ["npm:4.2.0", {\
+        "packageLocation": "../../../../../.yarn/berry/cache/tsconfig-paths-npm-4.2.0-ac1edf8677-10c0.zip/node_modules/tsconfig-paths/",\
+        "packageDependencies": [\
+          ["json5", "npm:2.2.3"],\
+          ["minimist", "npm:1.2.8"],\
+          ["strip-bom", "npm:3.0.0"],\
+          ["tsconfig-paths", "npm:4.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\

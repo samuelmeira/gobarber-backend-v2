@@ -1,9 +1,9 @@
 import path from 'path';
 import fs from 'fs';
-import { AppDataSource } from '../database/data-source';
-import User from '../models/User';
-import uploadConfig from '../config/upload';
-import AppError from '../errors/AppError';
+import { AppDataSource } from '@shared/infra/typeorm/data-source';
+import User from '../infra/typeorm/entities/User';
+import uploadConfig from '@config/upload';
+import AppError from '@shared/errors/AppError';
 
 interface Request {
   user_id: string;

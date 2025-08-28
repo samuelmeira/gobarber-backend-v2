@@ -2,9 +2,9 @@ import express, { NextFunction, Request, Response } from 'express';
 import routes from './routes';
 import 'reflect-metadata';
 import cors from 'cors'
-import { AppDataSource } from './database/data-source';
-import uploadConfig from './config/upload';
-import AppError from './errors/AppError';
+import { AppDataSource } from '@shared/infra/typeorm/data-source';
+import uploadConfig from '@config/upload';
+import AppError from '@shared/errors/AppError';
 
 AppDataSource.initialize()
   .then(() => console.log('Data Source initialized'))
