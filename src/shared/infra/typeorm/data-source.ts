@@ -11,6 +11,9 @@ export const AppDataSource = new DataSource({
   synchronize: false,
   logging: true,
   subscribers: [],
-  migrations: ['./src/database/migrations/*.ts'],
-  entities: ['./src/models/*.ts'],
+  migrations: ['./src/modules/shared/infra/typeorm/migrations/*.ts'],
+  entities: [
+    './src/modules/appointments/infra/typeorm/entities/*.ts',
+    './src/modules/users/infra/typeorm/entities/*.ts',
+  ],
 });
