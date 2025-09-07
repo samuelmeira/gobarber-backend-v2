@@ -1,12 +1,11 @@
 import 'reflect-metadata';
 import express, { NextFunction, Request, Response } from 'express';
 import routes from './routes';
-import cors from 'cors'
+import cors from 'cors';
 import { AppDataSource } from '@shared/infra/typeorm/data-source';
 import uploadConfig from '@config/upload';
 import AppError from '@shared/errors/AppError';
 import '@shared/container';
-
 
 AppDataSource.initialize()
   .then(() => console.log('Data Source initialized'))
@@ -16,9 +15,9 @@ AppDataSource.initialize()
 
 const app = express();
 app.use(express.json());
-app.use(cors())
+app.use(cors());
 app.use(routes);
-app.use('/files', express.static(uploadConfig.directory));
+app.use('/files', express.static(uploadConfig.uploadsFolder));
 
 app.use(
   (error: Error, request: Request, response: Response, _: NextFunction) => {
